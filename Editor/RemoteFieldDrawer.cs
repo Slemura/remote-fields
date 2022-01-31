@@ -98,7 +98,7 @@ namespace modules.remote_fields.Editor {
         }
 
         protected virtual string GetRemoteFieldType() {
-            return $"[{_default_value?.propertyType.HumanName().ToLower()}]";
+            return $"[{_default_value.propertyType.HumanName().ToLower()}]";
         }
     }
 }
