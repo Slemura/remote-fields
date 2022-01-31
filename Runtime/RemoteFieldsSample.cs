@@ -5,7 +5,7 @@ namespace com.rpdev.remote_fields {
     
     [CreateAssetMenu(fileName = "RemoteFieldTest", menuName = "Data/RemoteFieldTest")]
     [Serializable]
-    public class RemoteFieldsTest : ScriptableObject {
+    public class RemoteFieldsSample : ScriptableObject {
         
         [SerializeField]
         private Color _color;

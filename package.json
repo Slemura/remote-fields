@@ -1,0 +1,26 @@
+{
+  "name": "com.rpdev.remote-fields",
+  "displayName": "Unity Scripts Namespace Postprocessor",
+  "version": "0.0.1",
+  "unity": "2021.11",
+  "unityRelease": "11f1",
+  "description": "Namespace in scripts by folder name",
+  "dependencies": {
+  },
+  "keywords": [
+    "firebase",
+    "remote-fields",
+    "fields"
+  ],
+  "type": "module",
+  "author": {
+    "name": "rpdev",
+    "email": "titan.growl@gmail.com",
+    "url": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Slemura/firebase-remote-fields",
+    "revision": ""
+  }
+}

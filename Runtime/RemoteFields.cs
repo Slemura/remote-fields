@@ -25,7 +25,7 @@ namespace com.rpdev.remote_fields {
         [ReadOnly]
         private TValue _remote_value;
         [SerializeField]
-        private bool   _diff = true;
+        private bool   _diff;
     #endif
     
         protected RemoteField (string key) {
