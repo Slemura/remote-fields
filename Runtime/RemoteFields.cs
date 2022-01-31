@@ -52,7 +52,7 @@ namespace com.rpdev.remote_fields.Runtime {
     #if UNITY_EDITOR
         public void FetchInfo() {
             _remote_value = Value;
-            _diff         = EqualityComparer<TValue>.Default.Equals(_remote_value, _default_value);
+            _diff         = !EqualityComparer<TValue>.Default.Equals(_remote_value, _default_value);
         }
 
         public void MergeRemoteToDefault() {

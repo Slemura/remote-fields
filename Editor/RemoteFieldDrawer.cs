@@ -130,7 +130,7 @@ namespace com.rpdev.remote_fields.Editor {
 
             Rect remote_label_rect = new Rect(position.x,
                                               position.y + EditorGUI.GetPropertyHeight(_default_value) + 5,
-                                              position.width         - 30, 
+                                              position.width         - update_button_width - 5, 
                                               EditorGUI.GetPropertyHeight(_default_value));
 
             Color gui_color = GUI.color;
