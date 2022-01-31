@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "unity": "2021.1",
   "unityRelease": "11f1",
-  "description": "Firebase remote field implementation",
+  "description": "Firebase remote field implementation",  
   "dependencies": {
   },
   "keywords": [

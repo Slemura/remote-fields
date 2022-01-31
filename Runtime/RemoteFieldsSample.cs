@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace com.rpdev.remote_fields {
+namespace com.rpdev.remote_fields.Runtime {
     
     [CreateAssetMenu(fileName = "RemoteFieldTest", menuName = "Data/RemoteFieldTest")]
     [Serializable]

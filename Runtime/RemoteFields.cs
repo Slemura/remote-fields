@@ -2,7 +2,7 @@
 
 using Unity.Collections;
 
-namespace com.rpdev.remote_fields {
+namespace com.rpdev.remote_fields.Runtime {
     
     using System;
     using System.Collections.Generic;

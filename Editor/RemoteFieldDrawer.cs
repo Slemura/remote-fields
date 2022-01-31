@@ -1,11 +1,11 @@
 using System;
 using System.Reflection;
-using com.rpdev.remote_fields;
+using com.rpdev.remote_fields.Runtime;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
-namespace modules.remote_fields.Editor {
+namespace com.rpdev.remote_fields.Editor {
     
     [CustomPropertyDrawer(typeof(BoolRemoteField), true)]
     public class BoolRemoteFieldDrawer : RemoteFieldDrawer {}
