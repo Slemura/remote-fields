@@ -2,9 +2,7 @@
     "name": "com.rpdev.remote-fields.Editor",
     "rootNamespace": "com.rpdev.remote-fields.Editor",
     "references": [
-        "com.rpdev.remote-fields.Runtime",
-        "Unity.VisualScripting.Core",
-        "Unity.VisualScripting.Core.Editor"
+        "com.rpdev.remote-fields.Runtime"
     ],
     "includePlatforms": [
         "Editor"
