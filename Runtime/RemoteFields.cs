@@ -1,5 +1,6 @@
 
 
+using System.Reflection;
 using Unity.Collections;
 
 namespace com.rpdev.remote_fields.Runtime {
@@ -25,7 +26,7 @@ namespace com.rpdev.remote_fields.Runtime {
         [ReadOnly]
         private TValue _remote_value;
         [SerializeField]
-        private bool   _diff = true;
+        private bool   _diff;
     #endif
     
         protected RemoteField (string key) {
@@ -133,4 +134,6 @@ namespace com.rpdev.remote_fields.Runtime {
             return remote_config.GetValue(key).StringValue;
         }
     }
+
+    
 }

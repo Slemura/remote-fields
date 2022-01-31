@@ -5,10 +5,6 @@ namespace com.rpdev.remote_fields.Runtime {
     
     [CreateAssetMenu(fileName = "RemoteFieldTest", menuName = "Data/RemoteFieldTest")]
     public class RemoteFieldsSample : ScriptableObject {
-        
-        [SerializeField]
-        private Color _color;
-/*
         [SerializeField]
         private StringRemoteField _colum_remote = new StringRemoteField("column_remote");
 
@@ -29,10 +25,6 @@ namespace com.rpdev.remote_fields.Runtime {
         
         [SerializeField]
         private IntRemoteField _iteration = new IntRemoteField("iteration");
-        */
-
-        [SerializeField]
-        private IntRemoteField _iteratiofn = new IntRemoteField("iteration");
 
         private struct TestStruct {
             public int    index;
