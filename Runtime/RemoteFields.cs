@@ -25,11 +25,12 @@ namespace com.rpdev.remote_fields.Runtime {
         [ReadOnly]
         private TValue _remote_value;
         [SerializeField]
-        private bool   _diff;
+        private bool   _diff = true;
     #endif
     
         protected RemoteField (string key) {
             this.key = key;
+            _remote_value = _default_value;
         }
 
         public TValue Value {
@@ -49,6 +50,11 @@ namespace com.rpdev.remote_fields.Runtime {
         public void FetchInfo() {
             _remote_value = Value;
             _diff         = EqualityComparer<TValue>.Default.Equals(_remote_value, _default_value);
+        }
+
+        public void MergeRemoteToDefault() {
+            _default_value = _remote_value;
+            _diff          = false;
         }
     #endif
 
