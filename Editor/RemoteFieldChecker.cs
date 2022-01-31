@@ -8,7 +8,7 @@ namespace com.rpdev.remote_fields.Editor {
     public static class RemoteFieldChecker {
         
         public static void CheckRemoteFieldsInType(Type type, object instance) {
-            object[] remote_fields = type.GetFields()
+            object[] remote_fields = type.GetFields(BindingFlags.NonPublic | BindingFlags.Instance)
                                          .Select(field => field.GetValue(instance))
                                          .ToArray();
             

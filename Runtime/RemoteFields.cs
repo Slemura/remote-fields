@@ -51,13 +51,12 @@ namespace com.rpdev.remote_fields.Runtime {
 
     #if UNITY_EDITOR
         public void FetchInfo() {
-            
-            _diff         = false;
             _remote_value = Value;
-
-            Log($"{key} default value == remote value {EqualityComparer<TValue>.Default.Equals(_remote_value, _default_value)}");
-                
             _diff         = !EqualityComparer<TValue>.Default.Equals(_remote_value, _default_value);
+            
+            if (_diff) {
+                LogWarning($"{key} default value != remote value");
+            }
         }
 
         public void MergeRemoteToDefault() {
@@ -68,6 +67,10 @@ namespace com.rpdev.remote_fields.Runtime {
 
         protected abstract TValue GetRemoteValue (FirebaseRemoteConfig remote_config);
 
+        private void LogWarning(string log) {
+            Debug.LogWarning($"[Remote field] : {log}");
+        }
+        
         private void Log(string log) {
             Debug.Log($"[Remote field] : {log}");
         }
