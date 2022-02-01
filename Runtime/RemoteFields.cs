@@ -31,7 +31,6 @@ namespace com.rpdev.remote_fields.Runtime {
     
         protected RemoteField (string key) {
             this.key = key;
-            _remote_value = _default_value;
         }
 
         public TValue Value {
