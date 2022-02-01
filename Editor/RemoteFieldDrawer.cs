@@ -137,7 +137,7 @@ namespace com.rpdev.remote_fields.Editor {
             GUI.color = Color.yellow;
             EditorGUI.LabelField(remote_label_rect, $"Remote value = {GetRemoteValue()}", EditorStyles.boldLabel);
             GUI.color = gui_color;
-
+            
             bool pressed = EditorGUI.LinkButton(remote_value_rect, "^ Update default value ^");
             
             if (pressed) {

@@ -37,9 +37,7 @@ namespace com.rpdev.remote_fields.Runtime {
         public TValue Value {
             get {
                 FirebaseRemoteConfig remote_config = FirebaseRemoteConfig.DefaultInstance;
-                
-                Log($"key {key} remote config contains key {remote_config.Keys.Contains(key)}");
-                
+                                
                 if (remote_config.Keys.Contains(key))
                     return GetRemoteValue(remote_config);
 
