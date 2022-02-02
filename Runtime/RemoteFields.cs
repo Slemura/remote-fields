@@ -1,4 +1,3 @@
-using Unity.Collections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,15 +15,13 @@ namespace com.rpdev.remote_fields.Runtime {
     
         [SerializeField]
         private TValue _default_value;
-
-    #if UNITY_EDITOR
+        
         [SerializeField]
-        [ReadOnly]
         private TValue _remote_value;
+        
         [SerializeField]
         private bool   _diff;
-    #endif
-    
+
         protected RemoteField (string key) {
             this.key = key;
         }
@@ -56,10 +53,7 @@ namespace com.rpdev.remote_fields.Runtime {
             _default_value = _remote_value;
             _diff          = false;
         }
-    #endif
-
-        protected abstract TValue GetRemoteValue (FirebaseRemoteConfig remote_config);
-
+        
         private void LogWarning(string log) {
             Debug.LogWarning($"[Remote field] : {log}");
         }
@@ -67,6 +61,10 @@ namespace com.rpdev.remote_fields.Runtime {
         private void Log(string log) {
             Debug.Log($"[Remote field] : {log}");
         }
+    #endif
+
+        protected abstract TValue GetRemoteValue (FirebaseRemoteConfig remote_config);
+
     }
 
 
