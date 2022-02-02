@@ -1,0 +1,16 @@
+{
+    "name": "com.rpdev.remote-fields.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:d55d03bf72c7f914ca43f85ed21d9f77"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
