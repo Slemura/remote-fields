@@ -73,7 +73,12 @@ namespace com.rpdev.remote_fields.Runtime {
         public LongRemoteField (string key) : base(key) {}
 
         protected override long GetRemoteValue (FirebaseRemoteConfig remote_config) {
-            return remote_config.GetValue(key).LongValue;
+            try {
+                return remote_config.GetValue(key).LongValue;    
+            } catch (Exception e) {
+                Debug.LogError(e.Message);
+                return default;
+            }
         }
     }
 
@@ -82,7 +87,12 @@ namespace com.rpdev.remote_fields.Runtime {
         public IntRemoteField (string key) : base(key) {}
 
         protected override int GetRemoteValue (FirebaseRemoteConfig remote_config) {
-            return  (int)remote_config.GetValue(key).LongValue;
+            try {
+                return (int)remote_config.GetValue(key).LongValue;    
+            } catch (Exception e) {
+                Debug.LogError(e.Message);
+                return default;
+            }
         }
     }
 
@@ -92,7 +102,12 @@ namespace com.rpdev.remote_fields.Runtime {
         public FloatRemoteField (string key) : base(key) {}
 
         protected override float GetRemoteValue (FirebaseRemoteConfig remote_config) {
-            return (float)remote_config.GetValue(key).LongValue;
+            try {
+                return (float)remote_config.GetValue(key).LongValue;    
+            } catch (Exception e) {
+                Debug.LogError(e.Message);
+                return default;
+            }
         }
     }
 
@@ -101,7 +116,12 @@ namespace com.rpdev.remote_fields.Runtime {
         public BoolRemoteField (string key) : base(key) {}
 
         protected override bool GetRemoteValue (FirebaseRemoteConfig remote_config) {
-            return remote_config.GetValue(key).BooleanValue;
+            try {
+                return remote_config.GetValue(key).BooleanValue;    
+            } catch (Exception e) {
+                Debug.LogError(e.Message);
+                return default;
+            }
         }
     }
 
@@ -110,7 +130,12 @@ namespace com.rpdev.remote_fields.Runtime {
         public StringRemoteField (string key) : base(key) {}
 
         protected override string GetRemoteValue (FirebaseRemoteConfig remote_config) {
-            return remote_config.GetValue(key).StringValue;
+            try {
+                return remote_config.GetValue(key).StringValue;    
+            } catch (Exception e) {
+                Debug.LogError(e.Message);
+                return default;
+            }
         }
     }
 
@@ -136,9 +161,12 @@ namespace com.rpdev.remote_fields.Runtime {
         }
         
         protected override string GetRemoteValue (FirebaseRemoteConfig remote_config) {
-            return remote_config.GetValue(key).StringValue;
+            try {
+                return remote_config.GetValue(key).StringValue;    
+            } catch (Exception e) {
+                Debug.LogError(e.Message);
+                return default;
+            }
         }
     }
-
-    
 }

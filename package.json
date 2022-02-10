@@ -1,7 +1,7 @@
 {
   "name": "com.rpdev.remote-fields",
   "displayName": "Firebase remote field",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "unity": "2021.1",
   "unityRelease": "11f1",
   "description": "Firebase remote field implementation",  
